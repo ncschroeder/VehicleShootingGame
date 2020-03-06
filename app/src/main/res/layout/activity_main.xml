@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainMenu1080x1920"
+    android:background="@drawable/main_menu1080x1920"
     tools:context=".MainActivity">
 
     <Button
