@@ -4,23 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/car_screenshot"
     tools:context=".GameScreenshot">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Game Screenshot" />
-
-        <Button
-            android:id="@+id/game_over_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Go to game over screen" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/game_over_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="632dp"
+        android:text="Go to game over screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
