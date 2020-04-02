@@ -10,8 +10,8 @@ You can put a hyphen and then your name for the task you'll work on
 1. Create user interfaces for the main menu and other screens
 2. Make it so the user can click buttons on the screens to navigate between them
 ## Gameplay
-1. Make a vehicle stay at the bottom of the screen and make background move - Nicholas
-2. Make monsters spawn randomly at the top of the screen
+1. Make a vehicle stay at the bottom of the screen and make background move - Nicholas - Done
+2. Make monsters spawn randomly at the top of the screen - Nicholas
 3. Make bullets come from the vehicle and kill monsters when it hits them
 ## Design 
 1. Find or make sprites to be used for the vehicle, monsters, and background
