@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameSceneScript : MonoBehaviour
 {
-    public GameObject vehicle, camera;
+    /*public GameObject vehicle, camera;
+    public GameObject monsterPrefab;
+    GameObject monster;
+    float respawnTime, spawningYCoord, maxSpawnYCoord;
     Vector3 xMovement, yMovement, vehicleStartCoords, cameraStartCoords;
     //Vector2 screenBoundaries;
     float cameraMaxY, vehicleMinX, vehicleMaxX;
@@ -17,11 +20,14 @@ public class GameSceneScript : MonoBehaviour
         vehicleStartCoords = new Vector3(0, -7.6f, 0);
         cameraStartCoords = new Vector3(0, 0, -10);
 
+        respawnTime = 1;
+        spawningYCoord = 12;
+        maxSpawnYCoord = 34;
         //screenBoundaries = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
 
         cameraMaxY = 25;
-        vehicleMinX = -9.4f;
-        vehicleMaxX = 9.4f;
+        //vehicleMinX = -9.4f;
+        //vehicleMaxX = 9.4f;
 
         vehicle.transform.position = vehicleStartCoords;
         camera.transform.position = cameraStartCoords;
@@ -42,15 +48,7 @@ public class GameSceneScript : MonoBehaviour
             camera.transform.position = cameraStartCoords;
         }
 
-        if (Input.GetKey("left"))
-        {
-            if (vehicle.transform.position.x > vehicleMinX)
-                vehicle.transform.position -= xMovement;
-        }
-        if (Input.GetKey("right"))
-        {
-            if (vehicle.transform.position.x < vehicleMaxX)
-                vehicle.transform.position += xMovement;
-        }
-    }
+
+        
+    }*/
 }
