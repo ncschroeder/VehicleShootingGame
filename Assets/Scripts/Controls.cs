@@ -7,25 +7,25 @@ public class Controls : MonoBehaviour
 {
     // Start is called before the first frame update
     Vector3 xMovement;
-    float maxRightXCoord, maxLeftXCoord;
+    float maxXCoord, minXCoord;
     // Button moveLeftButton;
     void Start() 
     {
         xMovement = new Vector3(2, 0, 0);
-        maxRightXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
-        maxLeftXCoord = maxRightXCoord * -1;
+        maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
+        minXCoord = maxXCoord * -1;
         // moveLeftButton = this.get
     }
 
     public void moveLeft()
 	{
-        if (transform.position.x > maxLeftXCoord)
+        if (transform.position.x > minXCoord)
             transform.position -= xMovement;
     }
 
     public void moveRight()
 	{
-        if (transform.position.x < maxRightXCoord)
+        if (transform.position.x < maxXCoord)
             transform.position += xMovement;
     }
     /*void Update()

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4445960288370532875}
   - component: {fileID: 2108168346989792128}
+  - component: {fileID: 114403356424503210}
   m_Layer: 0
-  m_Name: monster 1
+  m_Name: monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,3 +80,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &114403356424503210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137558512418810818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6afdd798e4d1d4c8902ed1aeb7ad04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

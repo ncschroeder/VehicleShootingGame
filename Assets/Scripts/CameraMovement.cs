@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public GameObject monstersCollection;
     Vector3 yMovement, moveBackDistance;
-    float maxYCoord = 40;
+    float maxYCoord = 110;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,9 @@ public class CameraMovement : MonoBehaviour
         if (transform.position.y < maxYCoord)
             transform.position += yMovement;
         else
+        {
+            monstersCollection.GetComponent<MoveMonstersScript>().moveMonsters();
             transform.position -= moveBackDistance;
+        }
     }
 }
