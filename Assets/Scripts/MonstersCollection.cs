@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveMonstersScript : MonoBehaviour
+public class MonstersCollection : MonoBehaviour
 {
     public GameObject[] monsters;
 	float maxXCoord, minXCoord;
@@ -13,10 +13,10 @@ public class MoveMonstersScript : MonoBehaviour
 		maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
 		minXCoord = maxXCoord * -1;
 		positionCoords = new Vector3();
-		moveMonsters();
+		move();
 	}
 	
-	public void moveMonsters()
+	public void move()
 	{
         foreach (GameObject monster in monsters)
 		{
