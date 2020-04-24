@@ -11,7 +11,12 @@ public class Monster : MonoBehaviour
 	{
 		maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
 		minXCoord = maxXCoord * -1;
-		positionOffScreen = new Vector3(maxXCoord + 2, transform.position.y, transform.position.z);
+		positionOffScreen = new Vector3(maxXCoord + 4, transform.position.y, transform.position.z);
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		//Debug.Log("monster hit");
 	}
 
 	public void die()
