@@ -34,6 +34,7 @@ public class NewHighScoreButtonActions : MonoBehaviour
 
 	public void updateHighScores()
 	{
+		// Make it so that the high scores get updated only the first time the user clicks the submit button
 		if (!scoreAdded)
 		{
 			string playerName = nameInput.text;
