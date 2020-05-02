@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
         moving = true;
 
         // Move up distance
-        yMovement = new Vector3(0, 0.1f, 0);
+        yMovement = new Vector3(0, 5 * Time.deltaTime, 0);
 
         // Move back to starting position after vehicle reaches top of background
         moveBackDistance = new Vector3(0, maxYCoord, 0);
