@@ -8,6 +8,7 @@ public class ScoreScript : MonoBehaviour
 	public static bool incrementScore;
 	public static int score;
 	public Text scoreText;
+	public Text speedIncreasedText;
 
 	void Start()
 	{
@@ -30,8 +31,15 @@ public class ScoreScript : MonoBehaviour
 
 				// Make bullets go faster
 				BulletHolder.bulletSpeed += 200;
-				Debug.Log("Speed increased");
+				StartCoroutine(showSpeedIncreasedText());
 			}
 		}
+	}
+
+	IEnumerator showSpeedIncreasedText()
+	{
+		speedIncreasedText.enabled = true;
+		yield return new WaitForSeconds(1);
+		speedIncreasedText.enabled = false;
 	}
 }
