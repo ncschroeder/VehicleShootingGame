@@ -8,6 +8,12 @@ public class BulletHolder : MonoBehaviour
     public static float bulletSpeed = 1000;
     GameObject bullet;
     Rigidbody2D bulletRigidBody;
+    AudioSource bulletAudio;
+
+    void Start()
+	{
+        bulletAudio = GetComponent<AudioSource>();
+	}
 
     void Update()
     {
@@ -20,6 +26,7 @@ public class BulletHolder : MonoBehaviour
         bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
         bulletRigidBody = bullet.GetComponent<Rigidbody2D>();
         bulletRigidBody.AddForce(bulletRigidBody.transform.up * bulletSpeed);
+        bulletAudio.Play();
         Destroy(bullet, 1);
 	}
 }
