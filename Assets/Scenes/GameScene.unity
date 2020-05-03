@@ -1511,6 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1756682304}
+  speedIncreasedText: {fileID: 1936891900}
 --- !u!114 &1423954428
 MonoBehaviour:
   m_ObjectHideFlags: 0

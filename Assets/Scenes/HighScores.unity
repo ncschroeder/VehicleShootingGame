@@ -206,7 +206,6 @@ RectTransform:
   - {fileID: 1607292189}
   - {fileID: 1226153468}
   - {fileID: 889583963}
-  - {fileID: 985782803}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -292,54 +291,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 8.7}
   m_SizeDelta: {x: 160, y: 387.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &985782802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 985782803}
-  - component: {fileID: 985782804}
-  m_Layer: 5
-  m_Name: Button Action Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &985782803
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985782802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 210428613}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &985782804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985782802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae21817d651955c4aa7f7254c705a472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1056164148
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +456,7 @@ GameObject:
   - component: {fileID: 1124096476}
   - component: {fileID: 1124096475}
   m_Layer: 0
-  m_Name: test script
+  m_Name: Script Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,10 +471,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1124096474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9995192253e9e1448bb660d44f2e926e, type: 3}
+  m_Script: {fileID: 11500000, guid: ae21817d651955c4aa7f7254c705a472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 889583961}
+  scoreText: {fileID: 889583961}
 --- !u!4 &1124096476
 Transform:
   m_ObjectHideFlags: 0
@@ -760,7 +711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985782804}
+      - m_Target: {fileID: 1124096475}
         m_MethodName: goToMainMenu
         m_Mode: 1
         m_Arguments:

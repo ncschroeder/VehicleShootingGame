@@ -1,10 +1,2 @@
-Me 10
-Player 0
-Player 0
-Player 0
-Player 6
-abc 6
-abc 6
-n 6
-gfdgsdfgds 62
-;sdkfdsf 65
+a 3
+c 11

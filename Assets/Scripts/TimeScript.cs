@@ -14,7 +14,7 @@ public class TimeScript : MonoBehaviour
     void Start()
     {
         incrementTime = false;
-        timeLeft = 40;
+        timeLeft = 20;
         StartCoroutine(countdown());
     }
 

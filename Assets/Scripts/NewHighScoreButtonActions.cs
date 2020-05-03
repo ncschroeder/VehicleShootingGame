@@ -40,8 +40,41 @@ public class NewHighScoreButtonActions : MonoBehaviour
 			string playerName = nameInput.text;
 			string highScores = File.ReadAllText("Assets/highScores.txt");
 			highScores = highScores + '\n' + playerName + ' ' + ScoreScript.score;
+			//string[] highScoreLines = highScores.Split('\n');
 			File.WriteAllText("Assets/highScores.txt", highScores);
 			scoreAdded = true;
 		}
 	}
+
+	/*string[] getSortedScores(string[] highScoreLines)
+	{
+		// Use insertion sort to get top 10 scores
+		int numberOfScores = highScoreLines.Length;
+		int j, key;
+		for (int i = 1; i < numberOfScores; i++)
+		{
+			key = getHighScore(highScoreLines[i]);
+			j = i - 1;
+			while (j > 0 && getHighScore(highScoreLines[j]) > key)
+			{
+				highScoreLines[j + 1] = highScoreLines[j];
+				j--;
+			}
+			highScoreLines[j + 1] = highScoreLines[i];
+		}
+		if (numberOfScores <= 10)
+			return highScoreLines;
+		else
+		{
+			string[] top10Scores = new string[10];
+			for (int i = 0; i < 10; i++)
+				top10Scores[i] = highScoreLines[i];
+			return top10Scores;
+		}
+	}
+
+	int getHighScore(string highScoreEntry)
+	{
+		return int.Parse(highScoreEntry.Split(' ')[1]);
+	}*/
 }
