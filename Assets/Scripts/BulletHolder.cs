@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletHolder : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    float bulletSpeed = 1000;
+    public static float bulletSpeed = 1000;
     GameObject bullet;
     Rigidbody2D bulletRigidBody;
 

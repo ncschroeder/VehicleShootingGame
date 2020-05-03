@@ -7,16 +7,19 @@ using UnityEngine.SceneManagement;
 public class TimeScript : MonoBehaviour
 {
     public Text timeLabel;
+    public static int timeLeft;
     void Start()
     {
+        timeLeft = 40;
         StartCoroutine(countdown());
     }
 
     public IEnumerator countdown()
 	{
-        for (int timeLeft = 20; timeLeft > 0; timeLeft--)
+        while (timeLeft > 0)
 		{
             timeLabel.GetComponent<Text>().text = timeLeft.ToString();
+            timeLeft--;
             yield return new WaitForSeconds(1.0f);
         }
         SceneManager.LoadScene("NewHighScore");

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject monstersCollection;
-    Vector3 yMovement, moveBackDistance;
+    public GameObject[] monstersCollection;
+    static Vector3 yMovement;
+    Vector3 moveBackDistance;
+    static int speed;
     float maxYCoord = 110;
     public static bool moving;
 
     void Start()
     {
         moving = true;
-
+        speed = 5;
         // Move up distance
         yMovement = new Vector3(0, 5 * Time.deltaTime, 0);
 
@@ -28,10 +30,16 @@ public class CameraMovement : MonoBehaviour
                 transform.position += yMovement;
             else
             {
-                // Make monsters move to new position
-                monstersCollection.GetComponent<MonstersCollection>().move();
                 transform.position -= moveBackDistance;
+                foreach (GameObject monster in monstersCollection)
+                    monster.GetComponent<Monster>().moveToRandomPosition();
             }
         }
     }
+
+    public static void increaseSpeed()
+	{
+        speed += 2;
+        yMovement.y = speed * Time.deltaTime;
+	}
 }

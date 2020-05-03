@@ -10,5 +10,6 @@ public class Bullet : MonoBehaviour
 		other.GetComponent<Monster>().die();
 		Destroy(gameObject);
 		ScoreScript.incrementScore = true;
+		TimeScript.timeLeft++;
 	}
 }
