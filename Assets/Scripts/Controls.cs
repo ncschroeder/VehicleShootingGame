@@ -10,7 +10,9 @@ public class Controls : MonoBehaviour
     void Start() 
     {
         xMovement = new Vector3(2, 0, 0);
-        maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height;
+        maxXCoord = 7;
+        // Have this set to the below before building an apk
+        //maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height;
         minXCoord = maxXCoord * -1;
     }
 

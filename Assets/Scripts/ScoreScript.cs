@@ -8,6 +8,7 @@ public class ScoreScript : MonoBehaviour
 	public static bool incrementScore;
 	public static int score;
 	public Text scoreText;
+	public Text speedIncreasedText;
 
 	void Start()
 	{
@@ -19,9 +20,26 @@ public class ScoreScript : MonoBehaviour
 	{
 		if (incrementScore)
 		{
+			incrementScore = false;
 			score++;
 			scoreText.text = score.ToString();
-			incrementScore = false;
+
+			// Make speed increase every time a multiple of 5 is reached
+			if (score % 5 == 0)
+			{
+				CameraMovement.increaseSpeed();
+
+				// Make bullets go faster
+				BulletHolder.bulletSpeed += 200;
+				StartCoroutine(showSpeedIncreasedText());
+			}
 		}
+	}
+
+	IEnumerator showSpeedIncreasedText()
+	{
+		speedIncreasedText.enabled = true;
+		yield return new WaitForSeconds(1);
+		speedIncreasedText.enabled = false;
 	}
 }

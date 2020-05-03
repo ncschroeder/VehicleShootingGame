@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MainMenuSceneSwitcher : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
+	public Text bgLabel;
 	public void play()
 	{
 		SceneManager.LoadScene("GameScene");
@@ -13,5 +15,11 @@ public class MainMenuSceneSwitcher : MonoBehaviour
 	public void goToHighScores()
 	{
 		SceneManager.LoadScene("HighScores");
+	}
+
+	public void switchBG()
+	{
+		InstantiateBackground.bgChoice = bgLabel.text;
+		//Debug.Log("bg is " + bgLabel.text);
 	}
 }
