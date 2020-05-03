@@ -4,11 +4,7 @@ folder and click the "Select Folder" button. The project should open in Unity an
 on the GitHub repo since the .gitignore prevents that. I created this using Unity 2018.4.19f1.
 
 # Tasks
-You can put a hyphen and then your name for the task you'll work on
 ## Menu
-1. Make user interfaces prettier
-## Gameplay
-1. Make vehicle move faster as time progresses - Nicholas
-2. Make score increase after each kill and update highScores.txt after each game - Nicholas
+Make user interfaces prettier
 ## Design 
-1. Find or make sprites to be used for the vehicle, monsters, and background
+Find or make sprites to be used for the vehicle and monsters
