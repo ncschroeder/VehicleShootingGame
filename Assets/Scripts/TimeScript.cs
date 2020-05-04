@@ -14,7 +14,7 @@ public class TimeScript : MonoBehaviour
     void Start()
     {
         incrementTime = false;
-        timeLeft = 20;
+        timeLeft = 40;
         StartCoroutine(countdown());
     }
 
@@ -41,6 +41,7 @@ public class TimeScript : MonoBehaviour
 
     IEnumerator showTimeAddedText()
     {
+        // Show "+ 1 second" at the top of the screen for 1 second
         timeAddedText.enabled = true;
         yield return new WaitForSeconds(1);
         timeAddedText.enabled = false;

@@ -8,13 +8,13 @@ using System.IO;
 public class NewHighScoreButtonActions : MonoBehaviour
 {
 	public InputField nameInput;
-	public Text congratsText;
+	public Text scoreText;
 	bool scoreAdded;
 
 	void Start()
 	{
 		scoreAdded = false;
-		congratsText.text = congratsText.text + ' ' + ScoreScript.score.ToString();
+		scoreText.text = ScoreScript.score.ToString();
 	}
 
 	public void goToMainMenu()

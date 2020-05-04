@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
-	public Text timeAddedText;
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		other.GetComponent<Monster>().die();

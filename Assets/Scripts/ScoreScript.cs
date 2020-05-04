@@ -18,6 +18,7 @@ public class ScoreScript : MonoBehaviour
 
     void Update()
 	{
+		// incrementScore becomes true when a bullet enters a monster. This is seen in Bullet.cs.
 		if (incrementScore)
 		{
 			incrementScore = false;
@@ -31,6 +32,7 @@ public class ScoreScript : MonoBehaviour
 
 				// Make bullets go faster
 				BulletHolder.bulletSpeed += 200;
+
 				StartCoroutine(showSpeedIncreasedText());
 			}
 		}
@@ -38,6 +40,7 @@ public class ScoreScript : MonoBehaviour
 
 	IEnumerator showSpeedIncreasedText()
 	{
+		// Show "speed increased" at the top of the screen for 1 second
 		speedIncreasedText.enabled = true;
 		yield return new WaitForSeconds(1);
 		speedIncreasedText.enabled = false;

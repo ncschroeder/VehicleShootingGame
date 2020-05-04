@@ -9,9 +9,9 @@ public class Monster : MonoBehaviour
 
 	void Start()
 	{
-		maxXCoord = 7;
+		//maxXCoord = 7;
 		// Have this set to the below before building an apk
-		//maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
+		maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
 		minXCoord = maxXCoord * -1;
 		position = new Vector3(0, transform.position.y, transform.position.z);
 		positionOffScreen = new Vector3(50, transform.position.y, transform.position.z);
