@@ -13,8 +13,10 @@ public class NewHighScoreButtonActions : MonoBehaviour
 
 	void Start()
 	{
+		PlayerPrefs.SetInt("HighScore1Score", 1);
+		PlayerPrefs.SetString("HighScore1Name", "T");
 		scoreAdded = false;
-		scoreText.text = ScoreScript.score.ToString();
+		//scoreText.text = ScoreScript.score.ToString();
 	}
 
 	public void goToMainMenu()
@@ -34,15 +36,20 @@ public class NewHighScoreButtonActions : MonoBehaviour
 
 	public void updateHighScores()
 	{
+		string tempName;
+		int tempScore;
+
 		// Make it so that the high scores get updated only the first time the user clicks the submit button
 		if (!scoreAdded)
 		{
-			string playerName = nameInput.text;
+			/*string playerName = nameInput.text;
 			string highScores = File.ReadAllText("Assets/highScores.txt");
 			highScores = highScores + '\n' + playerName + ' ' + ScoreScript.score;
 			//string[] highScoreLines = highScores.Split('\n');
-			File.WriteAllText("Assets/highScores.txt", highScores);
+			File.WriteAllText("Assets/highScores.txt", highScores);*/
+
 			scoreAdded = true;
+
 		}
 	}
 

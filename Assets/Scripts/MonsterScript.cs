@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class MonsterScript : MonoBehaviour
 {
 	float maxXCoord, minXCoord;
 	Vector3 position, positionOffScreen;
@@ -24,7 +24,7 @@ public class Monster : MonoBehaviour
 		transform.position = position;
 	}
 
-	public void die()
+	public void moveOffScreen()
 	{
 		transform.position = positionOffScreen;
 	}

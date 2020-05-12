@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject[] monstersCollection;
+    public GameObject[] monsters;
     static Vector3 yMovement;
     Vector3 moveBackDistance;
     static int speed;
@@ -27,12 +27,17 @@ public class CameraMovement : MonoBehaviour
         if (moving)
 		{
             if (transform.position.y < maxYCoord)
+            {
                 transform.position += yMovement;
+            }
             else
             {
                 transform.position -= moveBackDistance;
-                foreach (GameObject monster in monstersCollection)
-                    monster.GetComponent<Monster>().moveToRandomPosition();
+                foreach (GameObject monster in monsters)
+                {
+                    monster.GetComponent<MonsterScript>().moveToRandomPosition();
+                }
+
             }
         }
     }
