@@ -11,9 +11,11 @@ public class NewHighScoreButtonActions : MonoBehaviour
 	public Text scoreText;
 	bool scoreAddedIfHighEnough;
 
+	// This function gets called when a game is over and the game shows the user what high score they got and allows them 
+	// to enter their name
 	void Start()
 	{
-
+		scoreText.text = ScoreScript.score.ToString();
 	}
 
 	public void goToMainMenu()
@@ -37,12 +39,12 @@ public class NewHighScoreButtonActions : MonoBehaviour
 		if (!scoreAddedIfHighEnough)
 		{
 			scoreAddedIfHighEnough = true;
-			Debug.Log("The score is " + ScoreScript.score.ToString());
-			Debug.Log("high score 8 is " + PlayerPrefs.GetInt("HighScore8Score").ToString());
-			// All of the following codes shifts the scores to the appropriate position in PlayerPrefs
+			
+			// All of the following codes shifts the scores to the appropriate position in PlayerPrefs.
+			// PlayerPrefs is short for player preferences and can be used to store simple information that gets saved when the 
+			// user shuts down the app.
 			if (ScoreScript.score > PlayerPrefs.GetInt("HighScore8Score") && ScoreScript.score <= PlayerPrefs.GetInt("HighScore7Score"))
 			{
-				Debug.Log("score is greater than score 8 and less than or equal to score 7");
 				PlayerPrefs.SetString("HighScore8Name", nameInput.text);
 				PlayerPrefs.SetInt("HighScore8Score", ScoreScript.score);
 			}
@@ -172,6 +174,8 @@ public class NewHighScoreButtonActions : MonoBehaviour
 				PlayerPrefs.SetString("HighScore1Name", nameInput.text);
 				PlayerPrefs.SetInt("HighScore1Score", ScoreScript.score);
 			}
+
+			PlayerPrefs.Save();
 		}
 	}
 }

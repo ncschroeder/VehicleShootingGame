@@ -7,6 +7,12 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 	public Text bgLabel;
+
+	public void Start()
+	{
+		InstantiateBackground.bgChoice = "Field";
+	}
+
 	public void play()
 	{
 		SceneManager.LoadScene("GameScene");

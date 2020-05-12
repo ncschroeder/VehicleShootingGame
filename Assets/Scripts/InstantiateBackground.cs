@@ -6,9 +6,7 @@ public class InstantiateBackground : MonoBehaviour
 {
     public GameObject fieldBG, desertBG, snowBG, roadBG;
     GameObject bg;
-
-    // Have bgChoice be Field by default since that is the default option in the drop down menu.
-    public static string bgChoice = "Field";
+    public static string bgChoice;
 
     // Start is called before the first frame update
     void Start()

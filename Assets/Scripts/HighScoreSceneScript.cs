@@ -10,10 +10,18 @@ public class HighScoreSceneScript : MonoBehaviour
 	public Text scoreText1, scoreText2, scoreText3, scoreText4, 
 		scoreText5, scoreText6, scoreText7, scoreText8;
 
+	// This function gets called when the high scores menu is visited
 	void Start()
 	{
-		//createHighScores();
-		//resetHighScores();
+		// PlayerPrefs is short for player preferences and can be used to store simple information that gets saved when the 
+		// user shuts down the app. 
+		if (!PlayerPrefs.HasKey("ScoresCreated"))
+		{
+			PlayerPrefs.SetInt("ScoresCreated", 1);
+			createHighScores();
+			PlayerPrefs.Save();
+		}
+		//clearHighScores();
 		displayHighScores();
 	}
 
@@ -74,7 +82,8 @@ public class HighScoreSceneScript : MonoBehaviour
 		}
 	}
 
-	void resetHighScores()
+	// Used in development but not in the final product
+	void clearHighScores()
 	{
 		PlayerPrefs.SetInt("HighScore1Score", 0);
 		PlayerPrefs.SetString("HighScore1Name", "");
@@ -106,41 +115,41 @@ public class HighScoreSceneScript : MonoBehaviour
 		int score = 10;
 
 		PlayerPrefs.SetInt("HighScore1Score", score);
-		PlayerPrefs.SetString("HighScore1Name", "a");
+		PlayerPrefs.SetString("HighScore1Name", "Ken");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore2Score", score);
-		PlayerPrefs.SetString("HighScore2Name", "b");
+		PlayerPrefs.SetString("HighScore2Name", "Jen");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore3Score", score);
-		PlayerPrefs.SetString("HighScore3Name", "c");
+		PlayerPrefs.SetString("HighScore3Name", "Louie");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore4Score", score);
-		PlayerPrefs.SetString("HighScore4Name", "d");
+		PlayerPrefs.SetString("HighScore4Name", "Ashley");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore5Score", score);
-		PlayerPrefs.SetString("HighScore5Name", "e");
+		PlayerPrefs.SetString("HighScore5Name", "Mark");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore6Score", score);
-		PlayerPrefs.SetString("HighScore6Name", "f");
+		PlayerPrefs.SetString("HighScore6Name", "Ivy");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore7Score", score);
-		PlayerPrefs.SetString("HighScore7Name", "g");
+		PlayerPrefs.SetString("HighScore7Name", "Thaddeus");
 
 		score--;
 
 		PlayerPrefs.SetInt("HighScore8Score", score);
-		PlayerPrefs.SetString("HighScore8Name", "h");
+		PlayerPrefs.SetString("HighScore8Name", "Libby");
 	}
 }
