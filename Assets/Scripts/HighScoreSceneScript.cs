@@ -12,6 +12,18 @@ public class HighScoreSceneScript : MonoBehaviour
 
 	void Start()
 	{
+		//createHighScores();
+		//resetHighScores();
+		displayHighScores();
+	}
+
+	public void goToMainMenu()
+	{
+		SceneManager.LoadScene("MainMenu");
+	}
+
+	void displayHighScores()
+	{
 		string displayText;
 		if (PlayerPrefs.GetString("HighScore1Name") != "")
 		{
@@ -60,11 +72,75 @@ public class HighScoreSceneScript : MonoBehaviour
 			displayText = PlayerPrefs.GetString("HighScore8Name") + "  " + PlayerPrefs.GetInt("HighScore8Score").ToString();
 			scoreText8.text = displayText;
 		}
-		//scoreText.text = File.ReadAllText("assets/highscores.txt");
 	}
 
-	public void goToMainMenu()
+	void resetHighScores()
 	{
-		SceneManager.LoadScene("MainMenu");
+		PlayerPrefs.SetInt("HighScore1Score", 0);
+		PlayerPrefs.SetString("HighScore1Name", "");
+
+		PlayerPrefs.SetInt("HighScore2Score", 0);
+		PlayerPrefs.SetString("HighScore2Name", "");
+
+		PlayerPrefs.SetInt("HighScore3Score", 0);
+		PlayerPrefs.SetString("HighScore3Name", "");
+
+		PlayerPrefs.SetInt("HighScore4Score", 0);
+		PlayerPrefs.SetString("HighScore4Name", "");
+
+		PlayerPrefs.SetInt("HighScore5Score", 0);
+		PlayerPrefs.SetString("HighScore5Name", "");
+
+		PlayerPrefs.SetInt("HighScore6Score", 0);
+		PlayerPrefs.SetString("HighScore6Name", "");
+
+		PlayerPrefs.SetInt("HighScore7Score", 0);
+		PlayerPrefs.SetString("HighScore7Name", "");
+
+		PlayerPrefs.SetInt("HighScore8Score", 0);
+		PlayerPrefs.SetString("HighScore8Name", "");
+	}
+
+	void createHighScores()
+	{
+		int score = 10;
+
+		PlayerPrefs.SetInt("HighScore1Score", score);
+		PlayerPrefs.SetString("HighScore1Name", "a");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore2Score", score);
+		PlayerPrefs.SetString("HighScore2Name", "b");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore3Score", score);
+		PlayerPrefs.SetString("HighScore3Name", "c");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore4Score", score);
+		PlayerPrefs.SetString("HighScore4Name", "d");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore5Score", score);
+		PlayerPrefs.SetString("HighScore5Name", "e");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore6Score", score);
+		PlayerPrefs.SetString("HighScore6Name", "f");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore7Score", score);
+		PlayerPrefs.SetString("HighScore7Name", "g");
+
+		score--;
+
+		PlayerPrefs.SetInt("HighScore8Score", score);
+		PlayerPrefs.SetString("HighScore8Name", "h");
 	}
 }

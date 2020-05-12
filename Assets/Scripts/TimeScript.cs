@@ -46,4 +46,9 @@ public class TimeScript : MonoBehaviour
         yield return new WaitForSeconds(1);
         timeAddedText.enabled = false;
     }
+
+    public void endGame()
+	{
+        timeLeft = 0;
+	}
 }
