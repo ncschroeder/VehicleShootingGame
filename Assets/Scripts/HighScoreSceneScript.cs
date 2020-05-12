@@ -21,7 +21,6 @@ public class HighScoreSceneScript : MonoBehaviour
 			createHighScores();
 			PlayerPrefs.Save();
 		}
-		//clearHighScores();
 		displayHighScores();
 	}
 

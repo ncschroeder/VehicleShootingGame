@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// This script is attached to the camera objects in the menu scenes. It moves the camera an unnoticeable amount every frame.
+// This script is attached to the camera objects in the menu scenes. It moves the camera every frame but this movement is not noticeable.
 // The reason I am using this script is because when I build an apk, the menus are just squares and tiny but the game screen is zoomed in.
 // The game screen features a moving camera, so if I make the camera in the menus moving then they will also be zoomed in.
 public class MenuCameraScript : MonoBehaviour
@@ -22,13 +22,13 @@ public class MenuCameraScript : MonoBehaviour
     {
         if (moveUp)
 		{
-            cameraPosition.y += 10;
+            cameraPosition.y += 20;
             transform.position = cameraPosition;
             moveUp = false;
 		} 
         else
 		{
-            cameraPosition.y -= 10;
+            cameraPosition.y -= 20;
             transform.position = cameraPosition;
             moveUp = true;
 		}

@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script for vehicle controls
 public class Controls : MonoBehaviour
 {
     Vector3 xMovement;
     float maxXCoord, minXCoord;
+
     void Start() 
     {
+        // xMovement makes the vehicle move 2 units to the left or right
         xMovement = new Vector3(2, 0, 0);
-        //maxXCoord = 7;
-        // Have this set to the below before building an apk
-        maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 2;
+
+        // The following code sets boundaries for how far the vehicle can go
+        maxXCoord = Camera.main.orthographicSize * Screen.width / Screen.height - 1;
         minXCoord = maxXCoord * -1;
     }
 

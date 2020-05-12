@@ -22,6 +22,7 @@ public class TimeScript : MonoBehaviour
 	{
         if (incrementTime)
 		{
+            // incrementTime becomes true when a bullet hits a monster
             incrementTime = false;
             timeLeft++;
             StartCoroutine(showTimeAddedText());
